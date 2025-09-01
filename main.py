@@ -14,8 +14,8 @@ SUPPORT_ROLES = [1409274874962120778]  # IDs dos cargos de suporte
 
 # ===== VIEW DO BOTÃO PRINCIPAL =====
 class TicketPanelView(View):
-    def _init_(self):
-        super()._init_(timeout=None)
+    def __init__(self):
+        super().__init__(timeout=None)
 
     @discord.ui.button(label="Abrir Ticket", style=discord.ButtonStyle.green, custom_id="open_ticket")
     async def open_ticket(self, interaction: discord.Interaction, button: discord.ui.Button):
